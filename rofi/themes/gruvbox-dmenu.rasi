@@ -1,0 +1,55 @@
+/**
+ * ROFI Color theme
+ * NAME: solarized-dmenu.rasi
+ * DESCRIPTION: This is a horizontal prompt similar to dmenu with the solarized colour scheme.
+ * AUTHOR: srjoeraj
+ */
+
+* {
+    background-color:           #002b36;
+    border-color:               #002b36;
+    text-color:                 #eee8d5;
+    height:                     24px;
+    font:                       "Roboto Medium 10";
+    prompt-font:                "Roboto Bold 10";
+    prompt-background:          #dc322f;
+    prompt-foreground:          #eee8d5;
+    prompt-padding:             2px;
+    selected-normal-background: #dc322f;
+    selected-normal-foreground: #d5c5a1;
+}
+#window {
+    anchor: north;
+    location: north;
+    width: 100%;
+    padding: 1px;
+    children: [ horibox ];
+}
+#horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+#prompt {
+    padding:          @prompt-padding;
+    background-color: @prompt-background;
+    text-color:       @prompt-foreground;
+    font:             @prompt-font;
+}
+#listview {
+    layout: horizontal;
+    lines: 100;
+}
+#entry {
+    padding: 2px;
+    expand: false;
+    width: 10em;
+}
+#element {
+    padding: 2px 8px;
+    font:   @font ;
+}
+#element selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+    font:   @font ;
+}
